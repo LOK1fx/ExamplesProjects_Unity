@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(CrystalSpawner))]
 public class GameMode : MonoBehaviour
 {
-    public static GameMode Instance;
+    public static GameMode Instance { get; private set; }
 
     public CrystalSpawner Spawner { get; private set; }
     public bool IsStarted { get; private set; }
+    public EGameMode CurrentGameMode { get; private set; }
 
-    public EGameMode CurrentGameMode;
 
     [Space]
     [SerializeField] private GameObject _defaultCrystalPrefab;
@@ -22,7 +22,16 @@ public class GameMode : MonoBehaviour
     {
         Spawner = GetComponent<CrystalSpawner>();
 
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -47,10 +56,13 @@ public class GameMode : MonoBehaviour
                 _rawTimer += 1;
             }
         }
+    }
 
-        //var index = Random.Range(0, 2);
+    public void SetGameMode(EGameMode gameMode)
+    {
+        CurrentGameMode = gameMode;
 
-        //Debug.Log(index);
+        IsStarted = false;
     }
 
     public void OnStartGame()

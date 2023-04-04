@@ -6,16 +6,16 @@ public class GameModeSelector : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            GameMode.Instance.CurrentGameMode = EGameMode.Default;
+            GameMode.Instance.SetGameMode(EGameMode.Default);
 
             TryStartGame();
         }
         else if (Input.GetKeyDown(KeyCode.H))
         {
-            GameMode.Instance.CurrentGameMode = EGameMode.OnTime;
+            GameMode.Instance.SetGameMode(EGameMode.OnTime);
 
             TryStartGame();
-        }   
+        }
     }
 
     private bool TryStartGame()

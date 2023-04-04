@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &60482625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60482627}
+  - component: {fileID: 60482626}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &60482626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60482625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fd60f7727a87a4bb67de9c07daefda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &60482627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60482625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434138003
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ac847952233b04fa1b471da3c0b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentGameMode: -1
   _defaultCrystalPrefab: {fileID: 7313861252483786261, guid: 401a3dd40fe494b4aa59142412e2632f, type: 3}
   _timedCrystalPrefab: {fileID: 1596630768753019328, guid: e8dbcc337e1b02c47b22759ca44b73bc, type: 3}
 --- !u!114 &434138006
@@ -199,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506784805
 Transform:
   m_ObjectHideFlags: 0
